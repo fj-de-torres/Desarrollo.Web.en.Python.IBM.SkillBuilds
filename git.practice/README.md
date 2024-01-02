@@ -13,3 +13,9 @@ I have accidentally deleted this file and its directory. After many attempts, wh
 7.- *git restore*  git.practice/README.md # I complete restoration.<br>
 8.- *git status*<br>
 9.- *git push* # final stage.
+We need to check in whch branch we are now. Let's make sure that we are in the *main* one:
+10.- *git branch*
+We were in the *git.practice* branch. So we shift to the *main* one:
+11.- *git checkout main*
+And from there, we merge the *git.practice* branch into the *main* one in which we are right now:
+12.- *git merge git.practice* #No need of a commit message here (?)
