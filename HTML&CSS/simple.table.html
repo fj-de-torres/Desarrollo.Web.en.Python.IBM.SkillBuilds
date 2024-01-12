@@ -13,8 +13,10 @@
          flex-direction: column;  */
       }
 
-      h1 {
+      h1,
+      h2 {
          margin: 2em auto;
+         text-align: center;
       }
 
       section {
@@ -25,11 +27,16 @@
          /* width: 40%; */
       }
 
+      #primera {
+         justify-content: space-around;
+      }
+
       table {
          margin: 2em 5em;
          width: auto;
          background-color: white;
-         /* display: flex; */
+         border: 2px solid black;
+         border-radius: 1%;
       }
 
       td,
@@ -37,6 +44,7 @@
          text-align: center;
          line-height: 1.7em;
          width: auto;
+         border: 1px solid darkslategrey;
       }
 
       table caption {
@@ -68,7 +76,7 @@
 
 <BODY>
    <h1>Ejemplo de tabla sencilla</h1>
-   <section>
+   <section id="primera">
       <table>
          <caption>Tabla Simple de 3x3</caption>
          <tr>
