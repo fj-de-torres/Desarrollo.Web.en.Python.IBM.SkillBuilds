@@ -1,146 +1,148 @@
 <!DOCTYPE html>
 <HTML>
+
 <HEAD>
    <meta charset="UTF-8">
    <title>Simple Table</title>
    <style>
       body {
-         background-color:lightgrey;
+         background-color: lightgrey;
       }
-      
+
       h1 {
          margin: 2em auto;
       }
-      
+
       section {
-         display:flex;
-         flex-direction:column;
-         width:auto;
+         display: flex;
+         flex-direction: column;
+         width: auto;
       }
-      
+
       table {
-         margin:2em 5em;
-         width:40em;
-         background-color:white;
+         margin: 2em 5em;
+         width: 40em;
+         background-color: white;
       }
-      
-      td, th {
-         text-align:center;
-         line-height:1.7em;
-         width:auto;
+
+      td,
+      th {
+         text-align: center;
+         line-height: 1.7em;
+         width: auto;
       }
-      
+
       table caption {
-         font-style:italic;
-         padding-bottom:.2em;
+         font-style: italic;
+         padding-bottom: .2em;
       }
-      
+
       /*table border {
          background-color:black;
       } */
    </style>
 </HEAD>
+
 <BODY>
 
-<section>
-<h1>Ejemplo de tabla sencilla</h1>
-<table border="1">
-   <caption>Tabla Simple de 3x3</caption>
-   <tr>
-      <th>Columna 1</th>
-      <th>Columna 2</th>
-      <th>Columna 3</th>
-   <tr>
-      <td>Celda A</td>
-      <td>Celda B</td>
-      <td>Celda C</td>
-   </tr>
-   <tr>
-      <td>Celda F</td>
-      <td>Celda G</td>
-      <td>Celda H</td>
-   </tr>
-</table>
+   <section>
+      <h1>Ejemplo de tabla sencilla</h1>
+      <table border="1">
+         <caption>Tabla Simple de 3x3</caption>
+         <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+            <th>Columna 3</th>
+         <tr>
+            <td>Celda A</td>
+            <td>Celda B</td>
+            <td>Celda C</td>
+         </tr>
+         <tr>
+            <td>Celda F</td>
+            <td>Celda G</td>
+            <td>Celda H</td>
+         </tr>
+      </table>
 
-<table border="1">
-   <caption>Piltrafillas</caption>
-   <tr>
-      <TH>Nombre</th>
-      <th>Día 1</th>
-      <th>Día 2</th>
-      <th>Día 3</th>
-      <th>Día 4</th>
-   </tr>
-   <tr>
-      <th>Mike (fucked up)</th>
-      <td colspan="3">0 Km</td>
-      <td>4 Km</td>
-   </tr>
-   <tr>
-      <th>Susan</th>
-      <td>23 Km</td>
-      <td>18 Km</td>
-      <td>19 Km</td>
-      <td>15 Km</td>
-   </tr>
-</table>
-   </tr>
-</table>
-<table border="1">
-   <caption>Tabla de cerdas unidas</caption>
-   <tr>
-      <th>&nbsp;</th> <!-- Celda -->
-      <th>Básico</th>
-      <th>Completo</th>
-   </tr>
-   <tr>
-      <th>Instalación</th>
-      <td rowspan="2">¡Gratis!</td>
-      <td>$49.99</td>
-   </tr>
-   <tr>
-      <th>Primer año</th>
-      <td>$19.99</th>
-    </tr>
-    <tr>
-       <th>Segundo año</th>
-       <td>$9.99</td>
-       <td>$29.99</td>
-    </tr>
-    <h2>Su pedido</h2>
-    
-</table border = "1em"> <!-- Se puede poner u omitir la unidad "px" -->
-   <tr>
-      <th scope="col">Nombre producto</th>
-      <th scope="col">Precio unitario</th>
-      <th scope="col">Unidades</th>
-      <th scope="col">Subtotal</th>
-   </tr>
-   <tr>
-      <td>Reproducror mp3 (80Gb)</td>
-      <td>192.02</td>
-      <td>1</td>
-      <td>192.02</td>
-   </tr>
-   <tr>
-      <td>Fundas de colores</td>
-      <td>2.50</td>
-      <td>5</td>
-      <td>12.50</td>
-   </tr>
-   <tr>
-      <td>Reprodcutor de radio</td>
-      <td>12.99</td>
-      <td>1</td>
-      <td>12.99</td>
-   </tr>
-   <tr>
-   <th scope="row">TOTAL</th>
-   <td>-</td>
-   <td>7</td>
-   <td><strong>207.51</strong></td>
-   </tr>
-<table>
+      <table border="1">
+         <caption>Piltrafillas</caption>
+         <tr>
+            <TH>Nombre</th>
+            <th>Día 1</th>
+            <th>Día 2</th>
+            <th>Día 3</th>
+            <th>Día 4</th>
+         </tr>
+         <tr>
+            <th>Mike (fucked up)</th>
+            <td colspan="3">0 Km</td>
+            <td>4 Km</td>
+         </tr>
+         <tr>
+            <th>Susan</th>
+            <td>23 Km</td>
+            <td>18 Km</td>
+            <td>19 Km</td>
+            <td>15 Km</td>
+         </tr>
+      </table>
+      <table border="1">
+         <caption>Tabla de cerdas unidas</caption>
+         <tr>
+            <th>&nbsp;</th> <!-- Celda -->
+            <th>Básico</th>
+            <th>Completo</th>
+         </tr>
+         <tr>
+            <th>Instalación</th>
+            <td rowspan="2">¡Gratis!</td>
+            <td>$49.99</td>
+         </tr>
+         <tr>
+            <th>Primer año</th>
+            <td>$19.99</th>
+         </tr>
+         <tr>
+            <th>Segundo año</th>
+            <td>$9.99</td>
+            <td>$29.99</td>
+         </tr>
+         <h2>Su pedido</h2>
 
-</table>
-</section>
+         <table border="1"> <!-- Se puede poner u omitir la unidad "px" -->
+            <caption>Tabla con la propiedad scope="col"</caption>
+            <tr>
+               <th scope="col">Nombre producto</th>
+               <th scope="col">Precio unitario</th>
+               <th scope="col">Unidades</th>
+               <th scope="col">Subtotal</th>
+            </tr>
+            <tr>
+               <td>Reproducror mp3 (80Gb)</td>
+               <td>192.02</td>
+               <td>1</td>
+               <td>192.02</td>
+            </tr>
+            <tr>
+               <td>Fundas de colores</td>
+               <td>2.50</td>
+               <td>5</td>
+               <td>12.50</td>
+            </tr>
+            <tr>
+               <td>Reprodcutor de radio</td>
+               <td>12.99</td>
+               <td>1</td>
+               <td>12.99</td>
+            </tr>
+            <tr>
+               <th scope="row">TOTAL</th>
+               <td>-</td>
+               <td>7</td>
+               <td><strong>207.51</strong></td>
+            </tr>
+            <table>
+
+            </table>
+   </section>
