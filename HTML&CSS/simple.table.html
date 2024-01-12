@@ -3,6 +3,8 @@
 
 <HEAD>
    <meta charset="UTF-8">
+   <meta http-equiv="refresh" content="20">
+
    <title>Simple Table</title>
    <style>
       body {
@@ -17,8 +19,9 @@
 
       section {
          display: flex;
-         flex-direction: column;
-         justify-content: center;
+         flex-direction: row;
+         justify-content: flex-start;
+         /* flex-wrap: wrap; */
          /* width: 40%; */
       }
 
@@ -41,6 +44,22 @@
          padding-bottom: .2em;
       }
 
+      /* figure {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      } */
+
+      figcaption {
+         /* text-align: center; */
+         font-style: italic;
+      }
+
+      section.images {
+         flex-direction: row;
+         justify-content: space-around;
+      }
+
       /*table border {
          background-color:black;
       } */
@@ -50,8 +69,7 @@
 <BODY>
    <h1>Ejemplo de tabla sencilla</h1>
    <section>
-
-      <table border="1">
+      <table>
          <caption>Tabla Simple de 3x3</caption>
          <tr>
             <th>Columna 1</th>
@@ -69,7 +87,7 @@
          </tr>
       </table>
 
-      <table border="1">
+      <table>
          <caption>Piltrafillas</caption>
          <tr>
             <TH>Nombre</th>
@@ -93,7 +111,7 @@
       </table>
    </section>
    <section>
-      <table border="1">
+      <table>
          <caption>Tabla de cerdas unidas</caption>
          <tr>
             <th>&nbsp;</th> <!-- Celda -->
@@ -114,9 +132,11 @@
             <td>$9.99</td>
             <td>$29.99</td>
          </tr>
-         <h2>Su pedido</h2>
       </table>
-      <table border="1"> <!-- Se puede poner u omitir la unidad "px" -->
+   </section>
+   <h2>Su pedido</h2>
+   <section>
+      <table> <!-- Se puede poner u omitir la unidad "px" -->
          <caption>Tabla con la propiedad scope="col"</caption>
          <tr>
             <th scope="col">Nombre producto</th>
@@ -148,7 +168,7 @@
             <td>7</td>
             <td><strong>207.51</strong></td>
          </tr>
-         <table border="1">
+         <table>
             <caption>Climatología</caption>
             <tr>
                <th>Hoy</th>
@@ -161,7 +181,7 @@
                <td>Parcialmente nublado</td>
             </tr>
          </table>
-         <table border="1">
+         <table>
             <caption>Climatología (pispa con scope)</caption>
             <tr>
                <th scope="row">Día:</th>
@@ -188,4 +208,18 @@
                <td>S 16 kmUh</td>
             </tr>
          </table>
+
+   </section>
+   <section class="images">
+      <figure>
+         <img src="https://c2.staticflickr.com/4/3378/3249690116_6d734f9938_b.jpg" alt="camaleón" width="400">
+         <figcaption>En su ambiente</figcaption>
+      </figure>
+      <figure>
+         <img src="https://c2.staticflickr.com/4/3378/3249690116_6d734f9938_b.jpg" alt="camaleón" width="400">
+         <figcaption>En su ambiente</figcaption>
+      </figure>
+      <figure><img src="https://c2.staticflickr.com/4/3378/3249690116_6d734f9938_b.jpg" alt="camaleón" width="400">
+         <figcaption>En su ambiente</figcaption>
+      </figure>
    </section>
