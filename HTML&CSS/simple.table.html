@@ -45,6 +45,7 @@
          line-height: 1.7em;
          width: auto;
          border: 1px solid darkslategrey;
+         padding: 0.5em 1em;
       }
 
       table caption {
@@ -72,13 +73,41 @@
          justify-content: space-around;
       }
 
-      /*table border {
-         background-color:black;
-      } */
+      audio {
+         width: 200px;
+         height: 50px;
+      }
    </style>
+   <script>
+      window.onload = function () {
+         var context = new (window.AudioContext || window.webkitAudioContext)();
+         var source = context.createBufferSource();
+         var gainNode = context.createGain();
+
+         // Load audio file
+         fetch('Miss.Monique.mp3')
+            .then(response => response.arrayBuffer())
+            .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
+            .then(audioBuffer => {
+               source.buffer = audioBuffer;
+               source.connect(gainNode);
+               gainNode.connect(context.destination);
+               source.start();
+
+               // Start at zero volume
+               gainNode.gain.setValueAtTime(0, context.currentTime);
+
+               // Create a 5 second fade-in effect
+               gainNode.gain.linearRampToValueAtTime(1, context.currentTime + 5);
+            });
+      }
+   </script>
 </HEAD>
 
 <BODY>
+   <!-- <audio id="myAudio"
+      src="/home/francisco/Music/Dance/Electronic/Miss Monique/Miss Monique - Siona Records 3rd Anniversary.mp3"
+      controls autoplay loop onPlay="audioVolumenIn(this);"></audio> -->
    <h1>Ejemplo de tabla sencilla</h1>
    <section id="primera">
       <table>
@@ -247,8 +276,12 @@
             allowfullscreen></iframe>
       </figure>
       <figure>
-         <video id="muyaya" width="218" controls autoplay>
+         <video id="muyaya" width="218" controls loop onPlay="audioVolumenIn(this);">
             <source src="/home/francisco/Videos/VID-20200821-WA0004.mp4">
          </video>
       </figure>
    </section>
+
+</BODY>
+
+</HTML>
