@@ -15,6 +15,7 @@
    <style>
       body {
          background-color:rgb(245,245,245);
+         background-image:url(https://wallpapercave.com/wp/wp3028175.jpg);
       }
       
       h1 {
@@ -29,7 +30,7 @@
          font-family: Arial;
       }
       form {
-         background-color:rgb(235,235,235);
+         background-color:rgb(235,235,235,.3);
          margin:2em 0;
          padding: 3em 2em;
          border: 1px solid darkgrey;
@@ -62,7 +63,10 @@
          min-width:700px;
          max-width:1200px;
          margin: 0 auto;
-         box-shadow: 0 0 50px darkorange inset;
+         box-shadow: 0 0 70px yellow inset;
+         border:3px solid yellow;
+         background-color:darkorange;
+    
          border-radius:5px 5px 5px;
          padding: 2em 0;
       }
@@ -87,11 +91,11 @@
 </HEAD>
 <BODY>
    <h1>Ejemplos de formularios</h1>
-   <h2>Da' forms:</h2>
+   <h2>(de los semanarios revolucionarios)</h2>
    <section id="seccionFormulario">
     
       <form name="formulario" id="formulario" method="get" autocomplete="off"> <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
-      <h3>Recogida de datos varios:</h3>
+      <h3>Recogida de datos varios</h3>
          <label for="email">Your email:</label>
          <input type = "email" id="email" name = "email" type = "email">
          
