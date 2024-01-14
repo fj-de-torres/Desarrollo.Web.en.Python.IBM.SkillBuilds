@@ -80,34 +80,32 @@
    </style>
    <script>
       window.onload = function () {
-         var context = new (window.AudioContext || window.webkitAudioContext)();
-         var source = context.createBufferSource();
-         var gainNode = context.createGain();
+         var audio = document.getElementById("myAudio");
+         audio.volume = 0; // Start at zero volume
 
-         // Load audio file
-         fetch('Miss.Monique.mp3')
-            .then(response => response.arrayBuffer())
-            .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
-            .then(audioBuffer => {
-               source.buffer = audioBuffer;
-               source.connect(gainNode);
-               gainNode.connect(context.destination);
-               source.start();
+         // Create a 5 second fade-in effect
+         var fadeAudio = setInterval(function () {
 
-               // Start at zero volume
-               gainNode.gain.setValueAtTime(0, context.currentTime);
+            // Increase volume by 0.02 every 100ms
+            if (audio.volume < 1) {
+               audio.volume += 0.002;
+            }
+            // When volume at maximum, stop interval
+            else {
+               clearInterval(fadeAudio);
+            }
+         }, 100);
 
-               // Create a 5 second fade-in effect
-               gainNode.gain.linearRampToValueAtTime(1, context.currentTime + 5);
-            });
+         // Delay start of audio until after volume has been set to 0
+         setTimeout(function () {
+            audio.play(); // Start playing audio
+         }, 1000); // Delay increased to 1 second
       }
    </script>
 </HEAD>
 
 <BODY>
-   <!-- <audio id="myAudio"
-      src="/home/francisco/Music/Dance/Electronic/Miss Monique/Miss Monique - Siona Records 3rd Anniversary.mp3"
-      controls autoplay loop onPlay="audioVolumenIn(this);"></audio> -->
+   <audio id="myAudio" src="sources/Miss.Monique.mp3" controls autoplay loop onPlay="audioVolumenIn(this);"></audio>
    <h1>Ejemplo de tabla sencilla</h1>
    <section id="primera">
       <table>
@@ -276,7 +274,7 @@
             allowfullscreen></iframe>
       </figure>
       <figure>
-         <video id="muyaya" width="218" controls loop onPlay="audioVolumenIn(this);">
+         <video id="muyaya" width="218" controls loop>
             <source src="/home/francisco/Videos/VID-20200821-WA0004.mp4">
          </video>
       </figure>
