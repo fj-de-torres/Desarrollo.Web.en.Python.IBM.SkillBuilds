@@ -3,22 +3,38 @@
 <HEAD>
    <meta charset="UTF-8"/>
    <title>Formulario Sencillo</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script&display=swap" rel="stylesheet">
    <style>
       body {
          background-color:rgb(245,245,245);
       }
       
+      h1 {
+         font-family: 'Bungee Spice', sans-serif;
+         font-size:4em;
+      }
       h1,h2 {
          text-align:center;
       }
       
+      h3 {
+         font-family: Arial;
+      }
       form {
          background-color:rgb(235,235,235);
          margin:2em 0;
          padding: 3em 2em;
          border: 1px solid darkgrey;
          border-radius:5%;
-         box-shadow:1px 1px 20px inset;
+         box-shadow:1px 1px 20px darkgrey inset;
          width:400px;
         /* min-width:400px;
          max-width:800px; */
@@ -43,6 +59,12 @@
          display:flex;
          flex-wrap:wrap;
          justify-content: space-around;
+         min-width:700px;
+         max-width:1200px;
+         margin: 0 auto;
+         box-shadow: 0 0 50px darkorange inset;
+         border-radius:5px 5px 5px;
+         padding: 2em 0;
       }
       
       label {
@@ -50,14 +72,26 @@
          /*display:block;*/
       }
       
+      legend {
+         font-family: 'Bungee Spice', sans-serif;
+	 font-family: 'Dancing Script', cursive;
+	 font-family: 'Bungee Spice', sans-serif;
+	 font-family: 'Dancing Script', cursive;
+	 font-size: 1.5em;
+	 /* font-align and padding: 0 auto don't seem to work */
+      }
+      fieldset {
+         margin-top:2em;
+      }
    </style>
 </HEAD>
 <BODY>
-   <h1>Envío de archivos a esta santa casa</h1>
+   <h1>Ejemplos de formularios</h1>
    <h2>Da' forms:</h2>
    <section id="seccionFormulario">
     
       <form name="formulario" id="formulario" method="get" autocomplete="off"> <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
+      <h3>Recogida de datos varios:</h3>
          <label for="email">Your email:</label>
          <input type = "email" id="email" name = "email" type = "email">
          
@@ -95,7 +129,9 @@
       Second form starts here -->
       
       <form name="formulario2" id="formulario2" method="get" autocomplete="on">
-      
+      <h3>Sube tus archivos</h3>
+      <fieldset>
+      <legend>Comparte tus archivos favoritos</legend>
       <label for="textBox">¿Qué tipo de archivo vas a subir?</label>
       
       <input type="text" name="textBox" id="textBox" value="archivo sin extensión">
@@ -104,28 +140,53 @@
       <datalist id="telInfo">
          <option value="952773366" label="Telefono 1"></option>
          <option value="952734366" label="Telefono 2"></option>
-         <option value="952773236" label="Telefono 3"></option>
+         <option value="952773236" label="Telefono 3" selected></option>
       </datalist>
       <label for="telefono">Teléfono:</label>
       	 <input type="tel" name="telefono" id="telefono" list="telInfo">
          <input type="submit" value="Enviarlo toa">
+      </fieldset>
       </form>
-      <form action="registrardatos.php" method="post">
+      <form action="registrardatos.php" method="post" name="formulario3" id="formulario3">
+      <h3>Ayúdanos a mejorar</h3>
          <fieldset>
-            <legend>Formulario de comentarios.</legend>
+            <legend>Formulario de comentarios</legend>
             <label for="nombre">Ingresa tu nombre:</label>
             <input type="text" name="nombre" size="30" id="nombre">
             <br>
-            
+            <br>
             <label for="mail">Ingresa tu email:</label>
             <input type="email" name="mail" id="mail">
             <br>
-            
-            <label for="comments">Comentarios:</label>
-            <textarea name="comentarios" id="comments" rows="5" cols="60"></textarea>
             <br>
-            
+            <label for="comments">Comentarios:</label>
+            <textarea name="comentarios" id="comments" rows="10" cols="40"></textarea>
+            <br>
             <input type="submit" value="Enviar">
+         </fieldset>
+      </form>
+      <form action="/action_page.php" method="get" enctype="multipart/form-data" accept-charset="UTF-8">
+      <h3>Formulario sobre gustos:</h3>
+         <fieldset>
+         <legend>Formulario sobre películas</legend>
+            <label for="peliculas">Elige la película que menos te guste:</label>
+            <select name="peliculas">
+               <option value="Superman">Superman</option>
+               <option value="Spiderman">Spiderman</option>
+               <option value="Batmam" selected>Batman</option>
+            </select>
+         </fieldset>
+         <fieldset id="coches">
+            <legend>Tus gustos sobre coches</legend>
+            <label for="cars">Ahora elige modelo de coche:</label>
+           <br>
+            <select name="cars" id="cars">
+               <option value="volvo">Volvo</option>
+               <option value="fiat">Fiat</option>
+               <option value="audi">Audi</option>
+               <option value="lacia">Lacia</option>
+               <option value="lamborgini" selected>Lamborgini</option>
+            </select>
          </fieldset>
       </form>
    </section>
