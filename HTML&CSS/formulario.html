@@ -4,31 +4,129 @@
    <meta charset="UTF-8"/>
    <title>Formulario Sencillo</title>
    <style>
-      form {
-         margin:2em 0;
+      body {
+         background-color:rgb(245,245,245);
       }
+      
+      h1,h2 {
+         text-align:center;
+      }
+      
+      form {
+         background-color:rgb(235,235,235);
+         margin:2em 0;
+         padding: 3em 2em;
+         border: 1px solid darkgrey;
+         border-radius:5%;
+         box-shadow:1px 1px 20px inset;
+         width:400px;
+        /* min-width:400px;
+         max-width:800px; */
+         min-height:300px;
+      }
+      form input {
+         background-color:rgb(250,250,250);
+      }
+      form input[type="submit"] {
+         background-color:black;
+         color: white;
+         font-weight:700;
+         border-radius:20%;
+         padding:.5em 1em;
+      }
+      form input[type="range"] {
+         color:grey;
+         accent-color:rgb(50,50,50);
+         display:block;
+      }
+      section {
+         display:flex;
+         flex-wrap:wrap;
+         justify-content: space-around;
+      }
+      
+      label {
+         margin-bottom:3px;
+         /*display:block;*/
+      }
+      
    </style>
 </HEAD>
 <BODY>
    <h1>Envío de archivos a esta santa casa</h1>
+   <h2>Da' forms:</h2>
    <section id="seccionFormulario">
+    
       <form name="formulario" id="formulario" method="get" autocomplete="off"> <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
-         Your email: <input type = "email" name = "email" type = "email">
-         <input type = "submit" value = "Enviar"><br><br>
-         Edad: <input type = "number" name = "edad" id = "edad" min = "18" max = "100">
+         <label for="email">Your email:</label>
+         <input type = "email" id="email" name = "email" type = "email">
+         
+         <label for="submit1">Yo te submito:</label>
+         <input type = "submit" value = "Enviar" id="submit1" name="submit"><br><br>
+         
+         <label for="edad">Edad:</label>
+         <input type = "number" name = "edad" id = "edad" min = "18" max = "100">
          <input type="submit" value="Enviar"><br><br>
-         Buscar: <input type = "search" name = "buscar" id = "buscar"><br><br>
-         URL: <input type="url" name="URL" id="URL"><br><br>
-         Edad (de la buena): <input type="number" name="edad2" id="edad2" min="0" max="100" step="5" placeholder="Introdúceme tu edad"><br><br>
-         Rango: <input type="range" min="0" max="100" step="5"><br><br>
-         Fecha: <input type="date" name="fecha" id="fecha"><br><br>
-         Hora: <input type="tiem" name="hora" id="hora" required><br><br>
-         Código postal: <input pattern="(0-9){5}" placeholder="5 dígitos"><br><br>
+         
+         <label for="buscar">Buscar:</label>
+         <input type = "search" name = "buscar" id = "buscar"><br><br>
+         
+         <label for="URL">URL:</label>
+         <input type="url" name="URL" id="URL"><br><br>
+         
+         <label for="edad2">Edad (de la buena):</label>
+         <input type="number" name="edad2" id="edad2" min="0" max="100" step="5" placeholder="Introdúceme tu edad"><br><br>
+         
+         <label for="rango">Rango:</label>
+         <input type="range" min="0" max="100" step="5" name="rango" id="rango"><br><br>
+         <label for="fecha">Fecha: </label>
+         <input type="date" name="fecha" id="fecha"><br><br>
+         
+         <label for="hora">Hora: </label>
+         <input type="tiem" name="hora" id="hora" required><br><br>
+         
+         <label for="cp">Código postal: </label>
+         <input pattern="[0-9]{5}" placeholder="5 dígitos" name="cp" id="cp"><br><br>
+         
          <input type="submit" value="Enviar"><br><br>
       </form>
+      
+      <!--Aquí empieza el segundo formulario
+      Second form starts here -->
+      
       <form name="formulario2" id="formulario2" method="get" autocomplete="on">
-      <input type="text" name="miFormulario" id="etiquetaText" value="archivo sin extensión">
-         <input type="submit" value="Enviar">
+      
+      <label for="textBox">¿Qué tipo de archivo vas a subir?</label>
+      
+      <input type="text" name="textBox" id="textBox" value="archivo sin extensión">
+            <br>
+      <br>
+      <datalist id="telInfo">
+         <option value="952773366" label="Telefono 1"></option>
+         <option value="952734366" label="Telefono 2"></option>
+         <option value="952773236" label="Telefono 3"></option>
+      </datalist>
+      <label for="telefono">Teléfono:</label>
+      	 <input type="tel" name="telefono" id="telefono" list="telInfo">
+         <input type="submit" value="Enviarlo toa">
+      </form>
+      <form action="registrardatos.php" method="post">
+         <fieldset>
+            <legend>Formulario de comentarios.</legend>
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input type="text" name="nombre" size="30" id="nombre">
+            <br>
+            
+            <label for="mail">Ingresa tu email:</label>
+            <input type="email" name="mail" id="mail">
+            <br>
+            
+            <label for="comments">Comentarios:</label>
+            <textarea name="comentarios" id="comments" rows="5" cols="60"></textarea>
+            <br>
+            
+            <input type="submit" value="Enviar">
+         </fieldset>
       </form>
    </section>
 </BODY>
