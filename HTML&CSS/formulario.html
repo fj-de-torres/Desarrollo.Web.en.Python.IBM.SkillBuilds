@@ -3,13 +3,31 @@
 <HEAD>
    <meta charset="UTF-8"/>
    <title>Formulario Sencillo</title>
-   
+   <style>
+      form {
+         margin:2em 0;
+      }
+   </style>
 </HEAD>
 <BODY>
    <h1>Envío de archivos a esta santa casa</h1>
-   <section id="formulario">
+   <section id="seccionFormulario">
       <form name="formulario" id="formulario" method="get" autocomplete="off"> <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
-         <input type="text" name="miFormulario" id="etiquetaText" value="archivo sin extensión">
+         Your email: <input type = "email" name = "email" type = "email">
+         <input type = "submit" value = "Enviar"><br><br>
+         Edad: <input type = "number" name = "edad" id = "edad" min = "18" max = "100">
+         <input type="submit" value="Enviar"><br><br>
+         Buscar: <input type = "search" name = "buscar" id = "buscar"><br><br>
+         URL: <input type="url" name="URL" id="URL"><br><br>
+         Edad (de la buena): <input type="number" name="edad2" id="edad2" min="0" max="100" step="5" placeholder="Introdúceme tu edad"><br><br>
+         Rango: <input type="range" min="0" max="100" step="5"><br><br>
+         Fecha: <input type="date" name="fecha" id="fecha"><br><br>
+         Hora: <input type="tiem" name="hora" id="hora" required><br><br>
+         Código postal: <input pattern="(0-9){5}" placeholder="5 dígitos"><br><br>
+         <input type="submit" value="Enviar"><br><br>
+      </form>
+      <form name="formulario2" id="formulario2" method="get" autocomplete="on">
+      <input type="text" name="miFormulario" id="etiquetaText" value="archivo sin extensión">
          <input type="submit" value="Enviar">
       </form>
    </section>
