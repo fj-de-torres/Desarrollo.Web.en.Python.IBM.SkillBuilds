@@ -1,0 +1,123 @@
+      body {
+          background-color: rgb(245, 245, 245);
+          background-image: url(https://wallpapercave.com/wp/wp3028175.jpg);
+          background-image: url(https://wallpaperforu.com/wp-content/uploads/2021/05/Wallpaper-Grayscale-Photo-Of-Desert-Iceland-Landscape-N18.jpg);
+          background-image: url(https://wallpaperforu.com/wp-content/uploads/2022/08/Wallpaper-Black-And-Gray-Newspaper-Background.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+
+      h1 {
+          font-family: 'Bungee Spice', sans-serif;
+          font-size: 4em;
+      }
+
+      h1,
+      h2 {
+          text-align: center;
+          text-shadow: 0 0 15px black;
+      }
+
+      h2 {
+          text-shadow: 2px 2px 15px white;
+      }
+
+      h3 {
+          font-family: Arial;
+      }
+
+      form {
+          background-color: rgb(235, 235, 235, .8);
+          margin: 2em 0;
+          padding: 1em 2em;
+          border: 1px solid darkgrey;
+          border-radius: 5%;
+          box-shadow: 1px 1px 20px darkgrey inset;
+          width: 400px;
+          /* min-width:400px;
+         max-width:800px; */
+          min-height: 500px;
+          position: relative;
+      }
+
+      form input {
+          background-color: rgb(250, 250, 250);
+      }
+
+      form input[type="submit"] {
+          background-color: black;
+          color: white;
+          font-weight: 700;
+          border-radius: 20%;
+          padding: .5em 1em;
+          display: block;
+          position: absolute;
+          left: 5%;
+          bottom: 5%;
+      }
+
+      form input[type="range"] {
+          color: grey;
+          accent-color: rgb(50, 50, 50);
+      }
+
+      /* form input#submitForm4 {
+         position: absolute;
+         left: 5%;
+         bottom: 5%;
+      } */
+
+      section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          min-width: 700px;
+          max-width: 1200px;
+          margin: 0 auto;
+          box-shadow: 0 0 70px yellow inset;
+          border: 3px solid yellow;
+          background-color: rgb(255, 140, 0, .5);
+
+          border-radius: 5px 5px 5px;
+          padding: 2em 0;
+      }
+
+      label {
+          margin-bottom: 3px;
+          /*display:block;*/
+      }
+
+      legend {
+          font-family: 'Bungee Spice', sans-serif;
+          font-family: 'Dancing Script', cursive;
+          font-family: 'Bungee Spice', sans-serif;
+          font-family: 'Dancing Script', cursive;
+          font-size: 1.5em;
+          /* font-align and padding: 0 auto don't seem to work */
+      }
+
+      fieldset {
+          margin-top: 2em;
+          position: relative;
+
+      }
+
+      footer {
+          margin: 5em auto 2em auto;
+          border-radius: 5px;
+          width: 50%;
+          background-color: rgba(255, 255, 0, 0.281);
+          padding: 1em;
+          font-family: 'Bungee Spice', sans-serif;
+          font-family: 'Dancing Script', cursive;
+          font-size: x-large;
+      }
+
+      summary {
+          font-weight: 700;
+          text-shadow: 5px 5px 10px white;
+      }
+
+      p {
+          background-color: rgba(251, 100, 6, 0.644);
+      }
