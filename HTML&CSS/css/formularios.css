@@ -33,11 +33,11 @@
           flex-direction: row;
           align-items: center;
           /*flex-flow: */
-          min-width: 600px;
-          max-width: 1200px;
+          min-width: 50%;
+          max-width: 80%;
           margin: 0 auto;
-          box-shadow: 0 0 70px yellow inset;
-          border: 3px solid yellow;
+          /* box-shadow: 0 0 70px yellow inset; */
+          /* border: 3px solid yellow; */
           background-color: rgb(255, 140, 0, .5);
           border-radius: 5px 5px 5px;
           padding: 2em 0;
