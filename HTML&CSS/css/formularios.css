@@ -28,11 +28,11 @@
 
       section {
           display: flex;
-          flex-wrap: wrap;
           justify-content: space-around;
-          flex-direction: row;
+          /* flex-direction: column;
+          flex-wrap: wrap; */
           align-items: center;
-          /*flex-flow: */
+          flex-flow: row wrap;
           min-width: 50%;
           max-width: 80%;
           margin: 0 auto;
@@ -43,9 +43,9 @@
           padding: 2em 0;
       }
 
-      section>*:first-child {
+      /* section>*:first-child {
           align-self: stretch;
-      }
+      } */
 
       form {
           background-color: rgb(235, 235, 235, .8);
@@ -59,7 +59,7 @@
          max-width:800px; */
           min-height: 500px;
           position: relative;
-          align-self: first flex-end;
+          /* align-self: first flex-end; */
       }
 
       form input {
