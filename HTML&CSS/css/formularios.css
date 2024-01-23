@@ -60,15 +60,19 @@
           border-radius: 5%;
           box-shadow: 1px 1px 20px darkgrey inset;
           width: 400px;
-          /* min-width: 400px;
+          /*   min-width: 400px;
           max-width: 800px; */
           min-height: 500px;
           position: relative;
           align-self: first flex-end;
+          /* flex-basis: content;
+           flex-grow: 1;
+          flex-shrink: 1; */
       }
 
       /* #formulario4 {
-          align-self: stretch;
+          align-self: flex-end;
+          flex-shrink: 2;
       } */
 
       form input {
