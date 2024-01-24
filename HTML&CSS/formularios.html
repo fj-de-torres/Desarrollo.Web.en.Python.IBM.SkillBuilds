@@ -30,43 +30,46 @@
    <h1>Ejemplos de formularios</h1>
    <h2>(de los semanarios revolucionarios)</h2>
    <section id="seccionFormulario">
-
-      <form name="formulario" id="formulario" method="get" autocomplete="off">
-         <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
-         <h3>Recogida de datos varios</h3>
-         <label for="email">Your email:</label>
-         <input type="email" id="email" name="email" type="email">
-         <br>
-         <!-- <label for="submit1">Yo te submito:</label>
+      <div class="container">
+         <form name="formulario" id="formulario" method="get" autocomplete="off">
+            <!-- No guardo en memoria entradas anteriores. Not storing former inputs in cache" -->
+            <h3>Recogida de datos varios</h3>
+            <div class="form-group">
+               <label for="email">Your email:</label><br>
+               <input type="email" id="email" name="email" type="email">
+            </div>
+            <br>
+            <!-- <label for="submit1">Yo te submito:</label>
          <input type="submit" value="Enviar" id="submit1" name="submit"><br><br> -->
 
-         <label for="edad">Edad:</label>
-         <input type="number" name="edad" id="edad" min="18" max="100">
-         <input type="submit" value="Enviar"><br><br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" min="18" max="100">
+            <input type="submit" value="Enviar"><br><br>
 
-         <label for="buscar">Buscar:</label>
-         <input type="search" name="buscar" id="buscar"><br><br>
+            <label for="buscar">Buscar:</label>
+            <input type="search" name="buscar" id="buscar"><br><br>
 
-         <label for="URL">URL:</label>
-         <input type="url" name="URL" id="URL"><br><br>
+            <label for="URL">URL:</label>
+            <input type="url" name="URL" id="URL"><br><br>
 
-         <label for="edad2">Edad (de la buena):</label>
-         <input type="number" name="edad2" id="edad2" min="0" max="100" step="5"
-            placeholder="Introdúceme tu edad"><br><br>
+            <label for="edad2">Edad (de la buena):</label>
+            <input type="number" name="edad2" id="edad2" min="0" max="100" step="5"
+               placeholder="Introdúceme tu edad"><br><br>
 
-         <label for="rango">Rango:</label>
-         <input type="range" min="0" max="100" step="5" name="rango" id="rango"><br><br>
-         <label for="fecha">Fecha: </label>
-         <input type="date" name="fecha" id="fecha"><br><br>
+            <label for="rango">Rango:</label>
+            <input type="range" min="0" max="100" step="5" name="rango" id="rango"><br><br>
+            <label for="fecha">Fecha: </label>
+            <input type="date" name="fecha" id="fecha"><br><br>
 
-         <label for="hora">Hora: </label>
-         <input type="tiem" name="hora" id="hora" required><br><br>
+            <label for="hora">Hora: </label>
+            <input type="tiem" name="hora" id="hora" required><br><br>
 
-         <label for="cp">Código postal: </label>
-         <input pattern="[0-9]{5}" placeholder="5 dígitos" name="cp" id="cp"><br><br>
+            <label for="cp">Código postal: </label>
+            <input pattern="[0-9]{5}" placeholder="5 dígitos" name="cp" id="cp"><br><br>
 
-         <input type="submit" value="Enviar"><br><br>
-      </form>
+            <input type="submit" value="Enviar"><br><br>
+         </form>
+      </div>
 
       <!--Aquí empieza el segundo formulario
       Second form starts here -->
