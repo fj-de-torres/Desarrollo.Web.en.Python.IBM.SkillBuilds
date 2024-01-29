@@ -36,11 +36,36 @@
             width: auto;
             height: auto;
             /* border: 1px solid blue; */
+
+        }
+
+        h2 {
+            color: antiquewhite;
+        }
+
+        /*Animation code*/
+        @keyframes atiquewhiteToBlack {
+            0% {
+                color: antiquewhite;
+            }
+
+            50% {
+                color: black;
+                font-size: xx-large;
+            }
+
         }
 
         h1,
         h2 {
             text-align: center;
+            color: black;
+            animation-name: atiquewhiteToBlack;
+            animation-duration: 2s;
+        }
+
+        h2 {
+            animation-delay: 2s;
         }
     </style>
     <!-- <script>
