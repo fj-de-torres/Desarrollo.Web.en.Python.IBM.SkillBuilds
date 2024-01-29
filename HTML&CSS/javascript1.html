@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1st Javascript</title>
     <style>
         * {
             margin: 0;
@@ -64,24 +64,27 @@
             animation-duration: 2s;
         }
 
-        h2 {
+        /* h2 {
             animation-delay: 2s;
-        }
+        } */
     </style>
-    <!-- <script>
-        var edad = prompt("¿Qué edad tienes?", 25);
-        if (edad % 5 == 0 && edad >= 25 && edad % 2 != 0) {
-            message = "¿Por el culo te la hinco?";
-            // console.log(message);
-            var confirmation = confirm(message);
-        }
+    <script>
+        function principal() {
+            var edad = prompt("¿Qué edad tienes?", 25);
+            if (edad % 5 == 0 && edad >= 25 && edad % 2 != 0) {
+                message = "¿Por el culo te la hinco?";
+                // console.log(message);
+                var confirmation = confirm(message);
+            }
 
-        else {
-            var message = "Pues me parece muy bien"
-            // console.log(message);
-            alert(message);
+            else {
+                var message = "Pues me parece muy bien"
+                // console.log(message);
+                alert(message);
+            }
         }
-    </script> -->
+        setTimeout(principal, 4000);
+    </script>
 </head>
 
 <body>
