@@ -8,10 +8,14 @@
     <script>
         var edad = prompt("¿Qué edad tienes?", 25);
         if (edad % 5 == 0 && edad >= 25 && edad % 2 != 0) {
-            console.log("Por el culo te la hinco");
+            message = "¿Por el culo te la hinco?";
+            // console.log(message);
+            var confirmation = confirm(message);
         }
         else {
-            console.log("Pues me parece muy bien");
+            var message = "Pues me parece muy bien"
+            // console.log(message);
+            alert(message);
         }
     </script>
 </head>
