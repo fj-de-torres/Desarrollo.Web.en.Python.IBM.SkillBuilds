@@ -5,23 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: antiquewhite;
+            padding: auto;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            /* border: 2px solid darkgoldenrod; */
+            margin: 0 auto;
+
+            /* padding: auto; */
+        }
+
+        header {
+            /* margin: auto 0; */
+            width: auto;
+            height: auto;
+            /* border: 1px solid blue; */
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+    <!-- <script>
         var edad = prompt("¿Qué edad tienes?", 25);
         if (edad % 5 == 0 && edad >= 25 && edad % 2 != 0) {
             message = "¿Por el culo te la hinco?";
             // console.log(message);
             var confirmation = confirm(message);
         }
+
         else {
             var message = "Pues me parece muy bien"
             // console.log(message);
             alert(message);
         }
-    </script>
+    </script> -->
 </head>
 
 <body>
-
+    <main>
+        <header>
+            <h1>Hey!</h1>
+            <h2>I'm about to ask about your age...</h2>
+        </header>
+    </main>
 </body>
 
 </html>
