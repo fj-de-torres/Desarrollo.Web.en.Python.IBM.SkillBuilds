@@ -47,13 +47,19 @@
         @keyframes atiquewhiteToBlack {
             0% {
                 color: antiquewhite;
+                visibility: hidden;
             }
 
             50% {
                 color: black;
                 font-size: xx-large;
+                visibility: visible;
             }
 
+            100% {
+                visibility: hidden;
+
+            }
         }
 
         h1,
@@ -61,7 +67,9 @@
             text-align: center;
             color: black;
             animation-name: atiquewhiteToBlack;
-            animation-duration: 2s;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            /* visibility: hidden; */
         }
 
         /* h2 {
@@ -82,8 +90,11 @@
                 // console.log(message);
                 alert(message);
             }
+            document.write("<h2>Tú lo quisiste, ché</h2>");
+
         }
-        setTimeout(principal, 4000);
+        setTimeout(principal, 5000);
+        //Testing increments on variables:
     </script>
 </head>
 
