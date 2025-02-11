@@ -19,8 +19,9 @@
         document.write("<p>El número después del incremento vale " + numero6 + "</p>");
         //ConcatenaçaÖ:
         var texto1 = "Cadena 1";
-        var texto2 = texto1.concat(" " + "cadena2");
-        document.write("<p>", texto2, "</p>");
+        var texto2 = "Cadena 2";
+        var textoTotal = texto1.concat(" " + texto2);
+        document.write("<p><strong>Concatenating texto1 + texto2:</strong> <i>", textoTotal, "</i></p>");
         var texto = "Esto es el texto";
         var resultado = texto.indexOf("texto");
         document.write("<p>", resultado, "</p>");
@@ -34,8 +35,8 @@
         document.write("<p>num5 + num6 as a string is: ", suma5String + suma6String, "</p>");
         texto1 = "Este era un texto que empezaba en mayúsculas y el resto es minúsculas";
         texto2 = "THIS WAS A TEXT ALL IN CAPITALS";
-        document.write("<p><strong>Converting texto1 to capitals:</strong> ", texto1.toUpperCase(), "</p>");
-        document.write("<p><strong>Capitalizing every word in text2:</strong> ", texto2.toLowerCase(), "</p>");
+        document.write("<p><strong>Converting texto1 to capitals:</strong> <i><mark>", texto1.toUpperCase(), "</mark></i></p>");
+        document.write("<p><strong>Capitalizing every word in text2:</strong> <i><mark>", texto2.toLowerCase(), "</mark></i></p>");
     </script>
 </head>
 
